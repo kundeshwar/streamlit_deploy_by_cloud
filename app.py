@@ -3,8 +3,8 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 #loading saved 
-diabeties_load = pickle.load(open("C:/Users/kunde/all vs code/ml prject/web_page_multiple_dieses/diabeties.pkl", "rb"))
-brest_load = pickle.load(open("C:/Users/kunde/all vs code/ml prject/web_page_multiple_dieses/breast_cancer.pkl", "rb"))
+diabeties_load = pickle.load(open("diabeties.pkl", "rb"))
+brest_load = pickle.load(open("breast_cancer.pkl", "rb"))
 
 with st.sidebar:
     selected = option_menu("Multiple Disease Prediction System", 
@@ -66,7 +66,7 @@ if (selected == "Breast Cancer Prediction"):
 
     def main_breast():
         #giving title
-        st.title("BREAST CANCER DISEASE PREDICTION BY ML(kp)")
+        st.title("BREAST CANCER DISEASE PREDICTION BY ML(KP MODEL)")
         #giting input values
         radius_mean             =  st.text_input( "radius_mean  of patient")
         texture_mean            =  st.text_input( "texture_mean of patient")
